@@ -15,7 +15,10 @@ export default function formatDate(inputDate: string) {
     return "Yesterday";
   } else {
     // Format as e.g. "Aug 12 2025"
-    const options = { month: "short", day: "numeric", year: "numeric" };
-    return date.toLocaleDateString("en-US", options);
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    });
   }
 }
